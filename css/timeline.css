@@ -1,0 +1,80 @@
+/* =========================================================
+   Experience — timeline
+   ========================================================= */
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary), var(--accent), transparent);
+  border-radius: 2px;
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 2rem;
+  animation: fadeUp .6s ease both;
+}
+.tl-dot {
+  position: absolute;
+  left: -1.85rem; top: 1.6rem;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 0 4px rgba(47, 74, 122, 0.12);
+}
+.tl-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.tl-card:hover { transform: translateX(4px); box-shadow: var(--shadow); }
+.tl-meta {
+  display: flex; align-items: center; gap: .8rem;
+  margin-bottom: .65rem;
+  flex-wrap: wrap;
+}
+.tl-date {
+  font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); font-weight: 600;
+}
+.tl-tag {
+  background: var(--bg-alt);
+  color: var(--primary);
+  padding: .25rem .7rem; border-radius: 999px;
+  font-size: .72rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.tl-card h3 {
+  font-size: 1.55rem; margin: 0 0 .15rem;
+}
+.tl-role {
+  font-family: var(--font-sans);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: .98rem;
+  margin: 0 0 .9rem;
+}
+.tl-card ul {
+  list-style: none; padding: 0; margin: 0 0 .8rem;
+}
+.tl-card ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--ink-soft);
+  margin-bottom: .4rem;
+}
+.tl-card ul li::before {
+  content: "▸";
+  color: var(--accent);
+  position: absolute; left: 0; top: 0;
+  font-size: .85rem;
+}

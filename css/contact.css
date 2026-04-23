@@ -1,0 +1,39 @@
+/* =========================================================
+   Contact page
+   ========================================================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  display: flex; flex-direction: column; gap: .35rem;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+  text-align: left;
+  animation: fadeUp .5s ease both;
+}
+.contact-card:hover:not(.static) {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+.contact-card .ic {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: .75rem;
+}
+.contact-card h3 { font-size: 1.25rem; margin: 0; }
+.contact-card p {
+  color: var(--ink-soft);
+  margin: 0;
+  word-break: break-word;
+}
